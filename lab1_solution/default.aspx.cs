@@ -16,7 +16,9 @@ namespace lab1_solution
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            lblName.Text = "Name: " + txtName.Text;
+            lblName.Text = "Name: " + txtName.Text;  
+
+
             lblPassword.Text = "Password: " + txtPassword.Text;
             lblAddress.Text = "Address: " + txtAddress.Text;
             lblEducation.Text = "Education: " + rblEducation.SelectedValue;
