@@ -4,24 +4,32 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>COMP2007 - Lab 1</title>
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <label for="txtName">Name:</label>
+
+    <div class="container">
+        <h1>COMP2007 - Lab 1 - Student Profile</h1>
+    <form id="form1" runat="server" class="form-horizontal">
+    <div class="form-group">
+        <label for="txtName" class="col-sm-2">Name:</label>
         <asp:textbox id="txtName" runat="server" />
     </div>
-    <div>
-        <label for="txtPassword">Password:</label>
+    <div class="form-group">
+        <label for="txtPassword" class="col-sm-2">Password:</label>
         <asp:textbox id="txtPassword" runat="server" textmode="Password" />
     </div>
-    <div>
-        <label for="txtAddress">Address:</label>
+    <div class="form-group">
+        <label for="txtAddress" class="col-sm-2">Address:</label>
         <asp:textbox id="txtAddress" runat="server" textmode="MultiLine" />
     </div>
-    <div>
-        <label for="rblEducation">Education:</label>
+    <div class="form-group">
+        <label for="rblEducation" class="col-sm-2">Education:</label>
         <asp:RadioButtonList ID="rblEducation" runat="server">
             <asp:ListItem Value="High School" Text="High School"></asp:ListItem>
             <asp:ListItem Value="College" Text="College"></asp:ListItem>
@@ -29,12 +37,12 @@
             <asp:ListItem Value="Other" Text="Other"></asp:ListItem>
         </asp:RadioButtonList>
     </div>
-    <div>
-        <label for="chkLaptop">Do you have a laptop? (check if yes):</label>
+    <div class="form-group">
+        <label for="chkLaptop" class="col-sm-2">Do you have a laptop? (check if yes):</label>
         <asp:CheckBox ID="chkLaptop" runat="server" />
     </div>
-    <div>
-        <label for="cblSkills">Skills List - Select all that apply:</label>
+    <div class="form-group">
+        <label for="cblSkills" class="col-sm-2">Skills List - Select all that apply:</label>
         <asp:CheckBoxList ID="cblSkills" runat="server">
             <asp:ListItem Value="HTML" Text="HTML"></asp:ListItem>
             <asp:ListItem Value="PHP" Text="PHP"></asp:ListItem>
@@ -43,8 +51,8 @@
             <asp:ListItem Value="Java" Text="Java"></asp:ListItem>
         </asp:CheckBoxList>
     </div>
-    <div>
-        <label for="ddlProvince">Province:</label>
+    <div class="form-group">
+        <label for="ddlProvince" class="col-sm-2">Province:</label>
         <asp:DropDownList ID="ddlProvince" runat="server">
             <asp:ListItem Value="AB" Text="AB"></asp:ListItem>
             <asp:ListItem Value="BC" Text="BC"></asp:ListItem>            
@@ -52,7 +60,11 @@
             <asp:ListItem Value="QC" Text="QC"></asp:ListItem>
         </asp:DropDownList>
     </div>
-    <asp:button id="btnSubmit" runat="server" text="Submit" onclick="btnSubmit_Click" />
+    
+        <div class="col-sm-offset-1">
+    <asp:button id="btnSubmit" runat="server" text="Submit" onclick="btnSubmit_Click" CssClass="btn btn-primary" />
+
+        </div>
         <div>
             <asp:label id="lblName" runat="server" />
         </div>
@@ -75,6 +87,6 @@
             <asp:label id="lblProvince" runat="server" />
         </div>
     </form>
-    </form>
+    </div>
 </body>
 </html>
